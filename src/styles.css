@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-default {
+    @apply flex w-full justify-center rounded-md bg-white border-solid border-2 border-gray-500 px-3 py-1.5 text-sm font-semibold leading-6 shadow-sm hover:bg-blue-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600;
+  }
+
+  .btn-primary {
+    @apply flex w-full justify-center rounded-md bg-blue-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600;
+  }
+
+  .btn-disabled {
+    @apply opacity-50 cursor-not-allowed;
+  }
+
+  .input-field {
+    @apply block w-full rounded-md border-0 p-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none;
+  }
+
+  .input-field-error {
+    @apply text-rose-900 placeholder:text-rose-400 ring-rose-600 focus:ring-rose-600
+  }
+
+  .input-label {
+    @apply block text-sm font-medium leading-6 text-gray-900;
+  }
+
+  .input-label-error {
+    @apply block text-sm font-medium leading-6 text-rose-600;
+  }
+
+  .input-label-required {
+    @apply after:content-['*'] after:ml-0.5 after:text-rose-500;
+  }
+}
