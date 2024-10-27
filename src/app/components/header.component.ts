@@ -20,6 +20,7 @@ import {Router, RouterLink} from "@angular/router";
         </div>
         <div class="flex justify-end gap-x-2">
           @if (stateService.authenticated()) {
+            <a routerLink="/" class="text-sm font-semibold leading-6 px-3 py-1.5 rounded-md text-black bg-white hover:text-white hover:bg-blue-500">Home</a>
             <a routerLink="/profile" class="text-sm font-semibold leading-6 px-3 py-1.5 rounded-md text-black bg-white hover:text-white hover:bg-blue-500">Profile</a>
             <a href="javascript:void(0)" class="text-sm font-semibold leading-6 px-3 py-1.5 rounded-md text-rose-600 bg-white hover:text-white hover:bg-rose-500"
                (click)="authenticationService.logout()">Log out</a>
